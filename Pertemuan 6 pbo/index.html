@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peminjaman Motor</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Data Peminjaman Motor</h2>
+    <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#motorModal">Tambah Motor</button>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Merk</th>
+                <th>Model</th>
+                <th>Tahun</th>
+                <th>Harga Sewa (per hari)</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="motorTableBody">
+           
+        </tbody>
+    </table>
+
+    <h4>Fitur Tambahan</h4>
+    <ul>
+        <li>Asuransi: Semua motor dilengkapi asuransi untuk keamanan ekstra.</li>
+        <li>Layanan Antar Jemput: Nikmati layanan antar jemput gratis dalam area tertentu.</li>
+        <li>Paket Diskon: Sewa lebih dari 3 hari dan dapatkan diskon khusus!</li>
+    </ul>
+
+    <h4>Cara Penyewaan</h4>
+    <ol>
+        <li>Pilih Motor: Telusuri daftar motor dan pilih yang sesuai.</li>
+        <li>Isi Formulir: Lengkapi data diri dan waktu penyewaan.</li>
+        <li>Konfirmasi Pembayaran: Lakukan pembayaran untuk mengkonfirmasi penyewaan.</li>
+        <li>Ambil Motor: Datang ke lokasi atau tunggu layanan antar jemput.</li>
+    </ol>
+
+    <h4>Hubungi Kami</h4>
+    <p>Telepon: <strong>(021) 123-4567</strong></p>
+    <p>Email: <strong>info@sewamotor.com</strong></p>
+    <p>Alamat: <strong>Jl. Motor No. 1, Jakarta</strong></p>
+</div>
+
+<div class="modal fade" id="motorModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Tambah Motor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="motorForm">
+                    <input type="hidden" id="motorId">
+                    <div class="form-group">
+                        <label for="motorBrand">Merk</label>
+                        <input type="text" class="form-control" id="motorBrand" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="motorModel">Model</label>
+                        <input type="text" class="form-control" id="motorModel" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="motorYear">Tahun</label>
+                        <input type="number" class="form-control" id="motorYear" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="motorPrice">Harga Sewa (per hari)</label>
+                        <input type="number" class="form-control" id="motorPrice" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
